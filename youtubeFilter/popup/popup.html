@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Entry Drops</title>
+    <link rel="stylesheet" href="bulma.min.css" />
+    <style>
+        body {
+          width: 350px;
+          padding: 10px;
+        }
+        
+        /* This targets only the date boxes */
+        input[type="date"] {
+          max-width: 150px; /* Adjust this to fit your preferred size */
+        }
+      </style>
+</head>
+<body>
+
+    <div class="container m-3">
+      <h1 class="title is-4">YouTube Filter</h1>
+      <p class="subtitle is-6">Show Only Videos With Selected Keywords</p>
+
+      <div class="field">
+        <label class="label" for="keywordInput">Add keyword</label>
+        <div class="control">
+          <input
+            id="keywordInput"
+            class="input"
+            type="text"
+            placeholder="e.g. spoilers, crypto, shorts"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-success" id="addKeywordButton" type="button">Add</button>
+        </div>
+        <div class="control">
+          <button class="button is-light" id="clearKeywordsButton" type="button">Clear all</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="field">
+        <label class="label">Saved keywords</label>
+        <textarea
+          id="savedKeywords"
+          class="textarea"
+          rows="4"
+          readonly
+          placeholder="No keywords yet"
+        ></textarea>
+      </div>
+    </div>
+
+    
+</body>
+<script src = "popup.js" > </script>
+
+</html>

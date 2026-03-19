@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "My YouTube Keyword Filter",
+    "version": "1.0",
+    "description": "Filters YouTube videos based on keywords.",
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "action": {
+      "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["content/content.js"]
+      }
+    ]
+  }
